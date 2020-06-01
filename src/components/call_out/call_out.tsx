@@ -98,7 +98,9 @@ export const EuiCallOut: FunctionComponent<EuiCallOutProps> = ({
       <div className="euiCallOutHeader">
         {headerIcon}
 
-        <H className="euiCallOutHeader__title">{title}</H>
+        {title && (
+          <H className="euiCallOutHeader__title">{title}</H>
+        )}
       </div>
 
       {optionalChildren}
